@@ -3,126 +3,129 @@
 <head>
 <meta charset="UTF-8">
 <title>Aozora Global Trade Co., Ltd.</title>
+
 <style>
 body { font-family: Arial; margin:0; background:#f5f5f5; }
-header { background:#0a1f44; color:white; padding:30px; text-align:center; }
+header { background:#0a1f44; color:white; padding:20px; display:flex; align-items:center; gap:15px; }
+header img { width:50px; }
 section { padding:40px; }
 .card { background:white; padding:20px; margin:20px 0; border-radius:10px; }
-img { width:100%; border-radius:10px; }
+img { width:100%; border-radius:10px; margin-top:10px; }
 .profile { display:flex; gap:20px; align-items:center; }
 .profile img { width:200px; }
+.lang { position:absolute; right:20px; top:20px; }
+button { margin-left:5px; }
 footer { background:#0a1f44; color:white; text-align:center; padding:20px; }
 </style>
+
+<script>
+function setLang(lang){
+document.querySelectorAll("[data-lang]").forEach(el=>{
+el.style.display = el.dataset.lang === lang ? "block" : "none";
+});
+}
+</script>
+
 </head>
 
 <body>
 
+<div class="lang">
+<button onclick="setLang('ja')">日本語</button>
+<button onclick="setLang('zh')">中文</button>
+<button onclick="setLang('en')">EN</button>
+</div>
+
 <header>
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
 <h1>Aozora Global Trade Co., Ltd.</h1>
-<p>国際貿易・サプライチェーン・ビジネスマッチング</p>
 </header>
 
 <section>
 
+<!-- 公司介紹 -->
 <div class="card">
-<h2>会社紹介</h2>
-<p>
-Aozora Global Trade Co., Ltd. は日本・東京を拠点とする総合貿易会社であり、
-アジアおよび欧州市場を中心に、輸出入、OEM製造、サプライチェーン構築、
-および企業間ビジネスマッチングを提供しています。
+<h2>会社紹介 / Company</h2>
+
+<p data-lang="ja">
+当社は東京を拠点とする総合貿易会社であり、国際貿易・物流・OEM開発を中心に事業を展開しています。
 </p>
 
-<p>
-当社は電子部品、機械設備、食品、日用品など幅広い分野において、
-現地パートナーとの強固なネットワークを活用し、
-クライアントの海外展開および市場拡大を支援しています。
+<p data-lang="zh">
+本公司為日本東京的綜合貿易公司，專注於國際貿易、物流及OEM合作。
 </p>
 
-<p>
-近年では、日本企業の海外進出支援および、
-海外企業の日本市場参入において多数の実績を有し、
-長期的な取引関係の構築を重視しています。
+<p data-lang="en">
+We are a Tokyo-based trading company specializing in global trade, logistics and OEM solutions.
 </p>
+
+<img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf">
 </div>
 
+<!-- 老闆 -->
 <div class="card profile">
 <img src="ceo.jpg">
 <div>
 <h2>代表取締役</h2>
-<p><b>林 志偉（Lin Zhi-Wei）</b></p>
 
-<p>
-台湾出身。国際貿易およびサプライチェーン分野において
-10年以上の実務経験を有する。
-</p>
+<p data-lang="ja">林志偉：国際貿易10年以上経験</p>
+<p data-lang="zh">林志偉：10年以上國際貿易經驗</p>
+<p data-lang="en">Lin Zhi-Wei: 10+ years in global trade</p>
 
-<p>
-過去にはアジア地域における電子製品輸出プロジェクト、
-欧州企業とのOEM提携案件などを主導し、
-複数の国際取引において安定した供給体制の構築に成功。
-</p>
-
-<p>
-現在は日本市場を拠点に、企業間連携、海外市場開拓、
-および長期パートナーシップの構築を中心に事業を展開。
-</p>
-
-<p>
-専門分野：国際貿易／物流最適化／OEM開発／市場戦略
-</p>
 </div>
 </div>
 
+<!-- 商務 -->
 <div class="card">
-<h2>商務交流紀錄</h2>
+<h2>商務交流</h2>
 
-<p><b>2025年12月｜東京本社</b><br>
-台湾電子部品メーカーとの定期商談を実施。
-日本国内代理販売に関する契約条件の調整および
-年間供給計画について協議。</p>
+<p>2025 東京會議</p>
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
 
-<p><b>2025年11月｜大阪</b><br>
-日本機械設備企業と東南アジア市場展開に関する打ち合わせ。
-現地パートナー選定および物流ルート最適化について検討。</p>
-
-<p><b>2025年10月｜オンライン会議</b><br>
-ドイツ企業とのOEM製造案件に関する進捗確認。
-品質基準および納期管理体制について合意。</p>
+<p>大阪合作</p>
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
 
 </div>
 
+<!-- 客戶評價 -->
 <div class="card">
-<h2>辦公環境</h2>
-<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
-<p>東京本社オフィスにおける日常業務風景</p>
+<h2>客戶評價</h2>
+
+<p>「合作順利，交付準時，值得長期合作。」— Tokyo Industrial</p>
+<p>「物流效率提升明顯，專業度高。」— Asia Logistics</p>
+<p>“Very reliable partner for OEM projects.” — EuroTech GmbH</p>
+
 </div>
 
+<!-- 地圖 -->
 <div class="card">
-<h2>主要取引先</h2>
-<p>・Tokyo Industrial Co., Ltd.</p>
-<p>・Asia Logistics Group</p>
-<p>・EuroTech GmbH</p>
-<p>・Shenzhen Electronics Ltd.</p>
+<h2>公司位置</h2>
+
+<iframe 
+src="https://www.google.com/maps?q=Tokyo%20Marunouchi&output=embed"
+width="100%" height="300" style="border:0;">
+</iframe>
+
+<p>東京都千代田区丸の内</p>
+
 </div>
 
+<!-- 聯絡 -->
 <div class="card">
-<h2>会社所在地</h2>
-<p>〒100-0005 東京都千代田区丸の内1-6-1</p>
-<p>Marunouchi, Chiyoda-ku, Tokyo, Japan</p>
-</div>
-
-<div class="card">
-<h2>お問い合わせ</h2>
+<h2>聯絡方式</h2>
 <p>Email：info@aozora-trade.co.jp</p>
 <p>Tel：+81-3-6868-8899</p>
-<p>営業時間：平日 9:00 - 18:00</p>
 </div>
 
 </section>
 
 <footer>
-<p>© 2026 Aozora Global Trade Co., Ltd.</p>
+<p>© 2026 Aozora Global Trade</p>
 </footer>
+
+<script>
+setLang('ja');
+</script>
 
 </body>
 </html>
